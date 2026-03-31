@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joseph Amani Muhombo | Développeur Web, Community Manager, Graphiste & Spécialiste IA à Lubumbashi</title>
+  <meta name="description" content="Portfolio professionnel de Joseph Amani Muhombo, développeur web, community manager, graphiste et spécialiste IA à Lubumbashi. Découvrez ses services, projets, témoignages et réalisations digitales." />
+  <meta name="keywords" content="Joseph Amani Muhombo, développeur web Lubumbashi, community manager RDC, graphiste Lubumbashi, spécialiste IA, portfolio développeur web, Dot Comika" />
+  <meta name="author" content="Joseph Amani Muhombo" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Joseph Amani Muhombo | Portfolio professionnel" />
+  <meta property="og:description" content="Développeur Web, Community Manager, Graphiste et Spécialiste IA. Découvrez mon univers, mes projets et mes services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/Josephamani.png" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --bg: #080b12;
+      --bg-soft: #0f1522;
+      --surface: rgba(255, 255, 255, 0.06);
+      --surface-strong: rgba(255, 255, 255, 0.1);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #f5f7fb;
+      --muted: #b3bfd4;
+      --primary: #4ea1ff;
+      --primary-soft: rgba(78, 161, 255, 0.16);
+      --accent: #7ad7ff;
+      --success: #22c55e;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --radius-sm: 16px;
+      --max-width: 1200px;
+      --transition: 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(78, 161, 255, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(122, 215, 255, 0.1), transparent 20%),
+        linear-gradient(180deg, #06080d 0%, #0b1120 100%);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    section {
+      padding: 96px 20px 0;
+    }
+
+    .container {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .section-head .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform var(--transition), background var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #2f79ff);
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(47, 121, 255, 0.28);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 18px 35px rgba(47, 121, 255, 0.34);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      border-color: var(--border);
+      color: var(--text);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-strong);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .btn-outline {
+      border-color: var(--border);
+      background: transparent;
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      background: var(--surface);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      backdrop-filter: blur(16px);
+      background: rgba(8, 11, 18, 0.78);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-inner {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: 1.05rem;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(78, 161, 255, 0.22), rgba(122, 215, 255, 0.15));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--accent);
+      box-shadow: var(--shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 600;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      color: var(--text);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 14px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      width: 20px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 999px;
+      transition: var(--transition);
+    }
+
+    .hero {
+      padding: 74px 20px 0;
+    }
+
+    .hero-grid {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .hero-copy .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      background: var(--primary-soft);
+      border: 1px solid rgba(78, 161, 255, 0.24);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+    }
+
+    .hero-copy h1 span {
+      background: linear-gradient(135deg, #ffffff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-copy .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .hero-roles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .metric-card {
+      padding: 18px;
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    .metric-card strong {
+      display: block;
+      font-size: 1.65rem;
+      margin-bottom: 6px;
+    }
+
+    .metric-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-photo-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 32px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+      min-height: 620px;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .hero-photo-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(78, 161, 255, 0.2), transparent 42%);
+      pointer-events: none;
+    }
+
+    .hero-photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .floating-card {
+      position: absolute;
+      background: rgba(8, 11, 18, 0.84);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .floating-card.top {
+      top: 24px;
+      right: -10px;
+      max-width: 260px;
+    }
+
+    .floating-card.bottom {
+      left: -16px;
+      bottom: 24px;
+      max-width: 260px;
+    }
+
+    .floating-card .label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .floating-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.55;
+    }
+
+    .about-grid,
+    .presence-grid,
+    .services-grid,
+    .projects-grid,
+    .testimonials-grid,
+    .contact-grid,
+    .footer-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .about-grid {
+      grid-template-columns: 0.95fr 1.05fr;
+      align-items: stretch;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+
+    .about-photo {
+      min-height: 560px;
+      overflow: hidden;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .about-content h3 {
+      font-size: 1.7rem;
+      margin-bottom: 18px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .presence-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .presence-card h3,
+    .service-card h3,
+    .project-card h3,
+    .testimonial-card h3,
+    .contact-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .presence-card .mini-badge,
+    .project-card .mini-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .presence-card p,
+    .service-card p,
+    .project-card p,
+    .testimonial-card p,
+    .contact-card p {
+      color: var(--muted);
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 18px;
+      display: inline-grid;
+      place-items: center;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, rgba(78,161,255,0.2), rgba(122,215,255,0.12));
+      color: var(--accent);
+      font-size: 1.4rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .service-list {
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .service-list li {
+      color: var(--text);
+      font-size: 0.96rem;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .service-list li i {
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    .projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .project-card .project-cover {
+      border-radius: 20px;
+      min-height: 220px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(140deg, rgba(78,161,255,0.2), rgba(10,15,28,0.4)),
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      display: flex;
+      align-items: end;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(122,215,255,0.16), transparent 30%);
+    }
+
+    .project-cover span {
+      position: relative;
+      z-index: 1;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .project-tags li {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+      .project-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .project-cover {
+  border-radius: 20px;
+  min-height: 220px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+    .testimonials-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .testimonial-card {
+      height: 100%;
+    }
+
+    .testimonial-top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-photo {
+      width: 78px;
+      height: 78px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .testimonial-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonial-role {
+      color: var(--accent);
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .quote {
+      position: relative;
+      color: var(--muted);
+      font-size: 0.98rem;
+      padding-top: 12px;
+    }
+
+    .quote::before {
+      content: "“";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      font-size: 3rem;
+      color: rgba(122, 215, 255, 0.2);
+      line-height: 1;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr 0.95fr;
+      align-items: start;
+    }
+
+    .contact-card .contact-list {
+      margin-top: 22px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-list a,
+    .contact-list span {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .contact-list i,
+    .social-links a i {
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .social-links a {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      transition: transform var(--transition), background var(--transition), border-color var(--transition);
+    }
+
+    .social-links a:hover {
+      transform: translateY(-3px);
+      background: var(--surface-strong);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .contact-cta {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-note {
+      padding: 24px;
+      min-height: 100%;
+      background:
+        linear-gradient(145deg, rgba(78,161,255,0.12), rgba(255,255,255,0.04)),
+        rgba(255,255,255,0.04);
+    }
+
+    .contact-note h3 {
+      margin-bottom: 14px;
+      font-size: 1.5rem;
+    }
+
+    .contact-note p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .availability {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .availability li {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 96px 20px 34px;
+    }
+
+    .footer-shell {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+      padding: 28px;
+      border-radius: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    .footer-grid {
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p,
+    .footer-bottom {
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    .footer-links a {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .footer-bottom {
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.94rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .presence-grid,
+      .services-grid,
+      .projects-grid,
+      .testimonials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-photo-card {
+        min-height: 520px;
+      }
+
+      .floating-card.top {
+        right: 10px;
+      }
+
+      .floating-card.bottom {
+        left: 10px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 20px;
+        right: 20px;
+        padding: 18px;
+        border-radius: 22px;
+        background: rgba(8, 11, 18, 0.96);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        display: none;
+      }
+
+      .nav-menu.open {
+        display: block;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .nav-actions {
+        display: none;
+      }
+
+      .nav-menu .btn {
+        width: 100%;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .hero-metrics,
+      .presence-grid,
+      .services-grid,
+      .projects-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo-card {
+        min-height: 460px;
+      }
+
+      .floating-card {
+        position: static;
+        margin-top: 16px;
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      section,
+      footer {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .nav-inner,
+      .hero-grid,
+      .container,
+      .footer-shell {
+        width: 100%;
+      }
+
+      .hero-copy h1 {
+        font-size: 2.55rem;
+      }
+
+      .hero-actions,
+      .project-actions,
+      .contact-cta {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn,
+      .project-actions .btn,
+      .contact-cta .btn {
+        width: 100%;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .hero-photo-card {
+        min-height: 400px;
+        padding: 12px;
+      }
+
+      .metric-card strong {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a class="brand" href="#accueil">
+        <span class="brand-mark"><i class="fa-solid fa-layer-group"></i></span>
+        <span>Joseph Amani Muhombo</span>
+      </a>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#temoignages">Témoignages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/243993185831?text=Bonjour%20Joseph%2C%20j%E2%80%99ai%20vu%20ton%20portfolio%20et%20je%20souhaite%20discuter%20d%E2%80%99un%20projet." target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Écrire sur WhatsApp
+        </a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/joseph-amani-muhombo-7a7828267" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a class="btn btn-primary" href="https://wa.me/243993185831?text=Bonjour%20Joseph%2C%20j%E2%80%99ai%20vu%20ton%20portfolio%20et%20je%20souhaite%20discuter%20d%E2%80%99un%20projet." target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero" id="accueil">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><i class="fa-solid fa-star"></i> Portfolio professionnel</span>
+        <h1>Je construis des <span>présences digitales crédibles</span> pour les marques, institutions et projets ambitieux.</h1>
+        <p class="lead">
+          Je suis <strong>Joseph Amani Muhombo</strong>, <strong>Développeur Web</strong>, <strong>Community Manager</strong>, <strong>Graphiste</strong> et <strong>Spécialiste IA</strong>. J’accompagne les entreprises, structures et porteurs de vision dans la création de plateformes web, visuels professionnels et dispositifs digitaux à fort impact.
+        </p>
+
+        <div class="hero-roles">
+          <span class="badge"><i class="fa-solid fa-code"></i> Développeur Web</span>
+          <span class="badge"><i class="fa-solid fa-bullhorn"></i> Community Manager</span>
+          <span class="badge"><i class="fa-solid fa-palette"></i> Graphiste</span>
+          <span class="badge"><i class="fa-solid fa-robot"></i> Spécialiste IA</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/243993185831?text=Bonjour%20Joseph%2C%20j%E2%80%99ai%20vu%20ton%20portfolio%20et%20je%20souhaite%20discuter%20d%E2%80%99un%20projet." target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i> Démarrer un projet
+          </a>
+          <a class="btn btn-secondary" href="#projets">
+            <i class="fa-solid fa-arrow-down"></i> Voir mes projets
+          </a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-card">
+            <strong>42 000+</strong>
+            <span>abonnés autour d’un média digital initié</span>
+          </div>
+          <div class="metric-card">
+            <strong>4 domaines</strong>
+            <span>compétences complémentaires réunies dans un seul profil</span>
+          </div>
+          <div class="metric-card">
+            <strong>Projet réel</strong>
+            <span>site institutionnel déjà conçu et mis en ligne</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-photo-card">
+          <img src="assets/img/Josephamani.png" alt="Photo de Joseph Amani Muhombo" />
+        </div>
+
+        <div class="floating-card top">
+          <span class="label">Positionnement</span>
+          <p>Profil polyvalent alliant technologie, communication, direction artistique et usage stratégique de l’intelligence artificielle.</p>
+        </div>
+
+        <div class="floating-card bottom">
+          <span class="label">Objectif</span>
+          <p>Créer des expériences digitales modernes, rassurantes et orientées impact pour les entreprises, institutions et marques personnelles.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="apropos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="fa-solid fa-user"></i> Aperçu sur moi</span>
+          <h2>Une biographie brève, mais une vision digitale bien réelle.</h2>
+          <p>Au-delà du code, mon travail consiste à donner de la cohérence, de la crédibilité et de la valeur à la présence digitale de mes clients et de mes propres initiatives.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card about-photo reveal">
+            <img src="assets/img/Josephamani.png" alt="Joseph Amani Muhombo portrait professionnel" />
+          </div>
+
+          <div class="card about-content reveal">
+            <h3>Joseph Amani Muhombo</h3>
+            <p>
+              Je suis <strong>développeur web</strong>, <strong>community manager</strong>, <strong>graphiste</strong> et <strong>spécialiste en intelligence artificielle</strong>, passionné par la conception de solutions digitales modernes, efficaces et visuellement fortes.
+            </p>
+            <p>
+              J’accompagne les entreprises, institutions et marques personnelles dans la création de sites web, de supports visuels et de stratégies de communication capables de renforcer leur image et leur impact en ligne.
+            </p>
+            <p>
+              Je suis également le <strong>visionnaire</strong> derrière <strong>Impeccable Actu Net</strong>, un magazine d’information en ligne rassemblant plus de <strong>42 000 abonnés sur Facebook</strong>, ainsi que <strong>Hathie Business</strong>, une plateforme numérique pensée pour accompagner la transformation digitale des entreprises et des particuliers.
+            </p>
+            <p>
+              Ces initiatives traduisent ma capacité à imaginer, structurer et faire évoluer des projets digitaux où se rencontrent technologie, créativité, communication et stratégie.
+            </p>
+
+            <div class="about-highlights">
+              <span class="badge"><i class="fa-solid fa-location-dot"></i> Lubumbashi, RDC</span>
+              <span class="badge"><i class="fa-solid fa-briefcase"></i> Marque personnelle premium</span>
+              <span class="badge"><i class="fa-solid fa-globe"></i> Projets web & médias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="presence">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> Présence digitale</span>
+          <h2>Des plateformes qui confirment ma vision et ma capacité à bâtir.</h2>
+          <p>Je ne me limite pas à exécuter. J’initie aussi des projets digitaux à portée réelle, avec audience, identité et ambition.</p>
+        </div>
+
+        <div class="presence-grid">
+          <article class="card presence-card reveal">
+            <span class="mini-badge"><i class="fa-solid fa-signal"></i> Média digital</span>
+            <h3>Impeccable Actu Net</h3>
+            <p>
+              Magazine d’information en ligne que j’ai initié et développé autour d’une communauté dépassant aujourd’hui les <strong>42 000 abonnés sur Facebook</strong>. Ce projet démontre ma capacité à construire une audience, gérer du contenu et positionner une plateforme digitale dans son environnement.
+            </p>
+          </article>
+
+          <article class="card presence-card reveal">
+            <span class="mini-badge"><i class="fa-solid fa-rocket"></i> Plateforme numérique</span>
+            <h3>Hathie Business</h3>
+            <p>
+              Plateforme multidisciplinaire pensée pour accompagner entreprises et particuliers en <strong>marketing digital</strong>, <strong>graphisme</strong>, <strong>communication</strong> et <strong>développement web</strong>. Elle traduit ma vision entrepreneuriale du digital et ma volonté d’apporter des solutions concrètes au marché local.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="fa-solid fa-briefcase"></i> Services</span>
+          <h2>Quatre domaines d’expertise au service de votre visibilité.</h2>
+          <p>Mon approche relie la technique, le visuel, le contenu et l’innovation afin de proposer des solutions plus cohérentes, plus modernes et plus efficaces.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Développement Web</h3>
+            <p>Création de sites web professionnels, modernes et optimisés pour valoriser une activité, une institution ou une marque personnelle.</p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i><span>Sites vitrines et portfolios premium</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Sites institutionnels et Applications web</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Responsive design et structure moderne</span></li>
+              <li><i class="fa-solid fa-check"></i><span>SEO de base pour une meilleure visibilité</span></li>
+            </ul>
+          </article>
+
+          <article class="card service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <h3>Community Management</h3>
+            <p>Gestion stratégique de la présence en ligne afin d’augmenter la visibilité, l’engagement et la cohérence d’une communication digitale.</p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i><span>Gestion de pages Facebook et autres réseaux</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Création de contenus adaptés à votre audience</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Planification et animation éditoriale</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Accompagnement branding et visibilité</span></li>
+            </ul>
+          </article>
+
+          <article class="card service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+            <h3>Graphisme</h3>
+            <p>Conception visuelle professionnelle pour donner à votre communication une identité forte, propre et immédiatement crédible.</p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i><span>Affiches publicitaires et institutionnelles</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Visuels pour réseaux sociaux et événements</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Branding, identité visuelle et supports de communication</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Miniatures, couvertures et créations premium</span></li>
+            </ul>
+          </article>
+
+          <article class="card service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+            <h3>Spécialiste IA</h3>
+            <p>Utilisation stratégique des outils d’intelligence artificielle pour accélérer la création, améliorer la production et renforcer l’efficacité digitale.</p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i><span>Création de contenus assistée par IA</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Génération d’idées, prompts et concepts visuels</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Accompagnement à l’usage d’outils IA</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Automatisation et optimisation de tâches digitales</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="fa-solid fa-diagram-project"></i> Projets</span>
+          <h2>Deux projets web, mais deux projets qui parlent fort.</h2>
+          <p>J’ai fait le choix de mettre en avant peu de projets, mais des projets cohérents, réels et représentatifs de mon niveau actuel.</p>
+        </div>
+
+        <div class="projects-grid">
+  <article class="card project-card reveal">
+    <div class="project-cover">
+      <img src="assets/img/dotcomika.png" alt="Capture du site DOT COMIKA">
+    </div>
+    <span class="mini-badge"><i class="fa-solid fa-building-columns"></i> Projet institutionnel réel</span>
+    <h3>Site officiel de la Dot COMIKA</h3>
+    <p>
+      Conception et développement du site officiel de la <strong>Dot COMIKA</strong>, une structure engagée dans le développement communautaire. Le projet met en avant la gouvernance, les actions sociales, les réalisations de terrain et la crédibilité institutionnelle de l’organisation.
+    </p>
+    <ul class="project-tags">
+      <li>Institutionnel</li>
+      <li>Responsive</li>
+      <li>SEO</li>
+      <li>Structure multi-sections</li>
+    </ul>
+    <div class="project-actions">
+      <a class="btn btn-primary" href="https://dotcomika.org" target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-up-right-from-square"></i> Voir le site
+      </a>
+    </div>
+  </article>
+
+  <article class="card project-card reveal">
+    <div class="project-cover">
+      <img src="assets/img/capptureportefolio.png" alt="Capture du portfolio personnel">
+    </div>
+    <span class="mini-badge"><i class="fa-solid fa-user-tie"></i> Marque personnelle</span>
+    <h3>Mon portfolio professionnel</h3>
+    <p>
+      Conception de mon propre portfolio comme outil de positionnement, de crédibilité et de conversion. Ce projet traduit mon approche du design, de l’expérience utilisateur et de la présentation stratégique de mes compétences.
+    </p>
+    <ul class="project-tags">
+              <li>Branding personnel</li>
+              <li>UX/UI</li>
+              <li>Responsive</li>
+              <li>Présentation stratégique</li>
+            </ul>
+            <div class="project-actions">
+              <a class="btn btn-secondary" href="#">
+                <i class="fa-solid fa-link"></i> Ajouter le lien plus tard
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="temoignages">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="fa-solid fa-quote-left"></i> Témoignages</span>
+          <h2>Des retours qui renforcent la confiance.</h2>
+        
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="card testimonial-card reveal">
+            <div class="testimonial-top">
+              <div class="testimonial-photo">
+                <img src="assets/img/honorable.jpg" alt="Honorable Nanou MEMBA" />
+              </div>
+              <div>
+                <h3>Honorable Nanou MEMBA</h3>
+                <p class="testimonial-role">Député National</p>
+              </div>
+            </div>
+            <p class="quote">Joseph Amani Muhombo est un jeune plein de ressources et de rigueur. Son sens de la communication et sa capacité d’adaptation font de lui un atout stratégique dans toute équipe.</p>
+          </article>
+
+          <article class="card testimonial-card reveal">
+            <div class="testimonial-top">
+              <div class="testimonial-photo">
+                <img src="assets/img/divine.jpg" alt="Divine Faila Mwangalalo" />
+              </div>
+              <div>
+                <h3>Divine Faila Mwangalalo</h3>
+                <p class="testimonial-role">Activiste des droits de l’homme</p>
+              </div>
+            </div>
+            <p class="quote">Professionnel, engagé et toujours à la pointe des outils numériques, Joseph est un communicateur d’impact qui se démarque par sa créativité et son sérieux.</p>
+          </article>
+
+          <article class="card testimonial-card reveal">
+            <div class="testimonial-top">
+              <div class="testimonial-photo">
+                <img src="assets/img/drjoyce.jpg" alt="Dr. Joyce Makongo" />
+              </div>
+              <div>
+                <h3>Dr. Joyce Makongo</h3>
+                <p class="testimonial-role">Directrice Générale — Hôpital Chinois Tiens Lubumbashi</p>
+              </div>
+            </div>
+            <p class="quote">Son accompagnement en communication digitale a apporté une vraie visibilité à notre institution. Joseph combine intelligence, méthode et passion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="fa-solid fa-paper-plane"></i> Contact</span>
+          <h2>Parlons de votre projet.</h2>
+          <p>Vous avez une idée, un besoin en communication, un site à créer ou une identité visuelle à renforcer ? Écrivez-moi directement.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card contact-card reveal">
+            <h3>Coordonnées</h3>
+            <p>Je suis disponible pour des collaborations, des prestations ou des projets digitaux à construire avec sérieux et vision.</p>
+
+            <div class="contact-list">
+              <a href="tel:+243993185831"><i class="fa-solid fa-phone"></i> +243 993 185 831</a>
+              <a href="mailto:josephamanimuhombo@gmail.com"><i class="fa-solid fa-envelope"></i> josephamanimuhombo@gmail.com</a>
+              <a href="https://wa.me/243993185831?text=Bonjour%20Joseph%2C%20j%E2%80%99ai%20vu%20ton%20portfolio%20et%20je%20souhaite%20discuter%20d%E2%80%99un%20projet." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp direct</a>
+            </div>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/profile.php?id=100063931290735" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.linkedin.com/in/joseph-amani-muhombo-7a7828267?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://wa.me/243993185831?text=Bonjour%20Joseph%2C%20j%E2%80%99ai%20vu%20ton%20portfolio%20et%20je%20souhaite%20discuter%20d%E2%80%99un%20projet." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+            <div class="contact-cta">
+              <a class="btn btn-primary" href="https://wa.me/243993185831?text=Bonjour%20Joseph%2C%20j%E2%80%99ai%20vu%20ton%20portfolio%20et%20je%20souhaite%20discuter%20d%E2%80%99un%20projet." target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i> Me contacter maintenant
+              </a>
+              <a class="btn btn-outline" href="mailto:josephamanimuhombo@gmail.com">
+                <i class="fa-solid fa-envelope"></i> Envoyer un email
+              </a>
+            </div>
+          </div>
+
+          <aside class="card contact-note reveal">
+            <h3>Pourquoi travailler avec moi ?</h3>
+            <p>
+              Parce que j’allie plusieurs compétences complémentaires dans une même vision : créer une présence digitale forte, cohérente et alignée avec vos objectifs.
+            </p>
+            <p>
+              Mon approche ne se limite pas à produire. Elle consiste à penser l’image, la crédibilité, le message et l’expérience que votre audience retiendra.
+            </p>
+
+            <ul class="availability">
+              <li><i class="fa-solid fa-check"></i> Approche stratégique et visuelle</li>
+              <li><i class="fa-solid fa-check"></i> Communication rapide via WhatsApp</li>
+              <li><i class="fa-solid fa-check"></i> Solutions adaptées au contexte local</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-shell reveal">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Joseph Amani Muhombo</h3>
+          <p>Développeur Web, Community Manager, Graphiste et Spécialiste IA. Je conçois des solutions digitales modernes, crédibles et orientées impact.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#accueil">Accueil</a>
+          <a href="#apropos">À propos</a>
+          <a href="#services">Services</a>
+          <a href="#projets">Projets</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Joseph Amani Muhombo — Tous droits réservés.</span>
+       
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+  </script>
+  
+</body>
+</html>

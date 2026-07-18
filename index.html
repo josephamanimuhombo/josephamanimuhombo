@@ -1022,6 +1022,24 @@
   border-radius: inherit;
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
 
@@ -1257,7 +1275,7 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow"><i class="fa-solid fa-diagram-project"></i> Projets</span>
-          <h2>Deux projets web, mais deux projets qui parlent fort.</h2>
+          <h2>Trois projets web, mais trois projets qui parlent fort.</h2>
           <p>J’ai fait le choix de mettre en avant peu de projets, mais des projets cohérents, réels et représentatifs de mon expérience professionnelle.</p>
         </div>
 
@@ -1283,6 +1301,37 @@
       </a>
     </div>
   </article>
+
+  
+  <article class="card project-card reveal">
+    <div class="project-cover">
+      <img src="assets/img/jsgsarl.png" alt="Capture du site JSG SARL">
+    </div>
+
+    <span class="mini-badge">
+      <i class="fa-solid fa-building"></i> Projet d'entreprise réel
+    </span>
+
+    <h3>Site officiel de JSG SARL</h3>
+
+    <p>
+      Conception et développement du site officiel de <strong>JSG SARL</strong>, une entreprise spécialisée dans la <em>construction, le génie civil, l'agriculture et les services numériques</em>. Le site présente les activités de l'entreprise, ses réalisations, ses services et facilite les demandes de devis grâce à une interface moderne, responsive et optimisée pour le référencement.
+    </p>
+
+    <ul class="project-tags">
+      <li>Entreprise</li>
+      <li>Responsive</li>
+      <li>SEO</li>
+      <li>Demande de devis</li>
+    </ul>
+
+    <div class="project-actions">
+      <a class="btn btn-primary" href="https://jsgsarl.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-up-right-from-square"></i> Voir le site
+      </a>
+    </div>
+  </article>
+
 
   <article class="card project-card reveal">
     <div class="project-cover">

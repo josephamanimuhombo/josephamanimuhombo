@@ -2408,6 +2408,43 @@ section {
   }
 }
 
+/* Correction de la navigation du footer */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px 20px;
+}
+
+.footer-links a {
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+.footer-bottom {
+  align-items: center;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+    gap: 12px 18px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
 
 
 
